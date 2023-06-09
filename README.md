@@ -13,7 +13,7 @@
 
 - 🤝 I’m looking for help with **referrals**
 
-- 👨‍💻 All of my projects are available at [https://www.linkedin.com/in/kiriti-desarkar/](https://www.linkedin.com/in/kiriti-desarkar/)
+- 👨‍💻 All of my projects are available at [Resume](https://github.com/kiriti-desarkar/kiriti-desarkar/blob/main/kiritiResume.pdf)
 
 - 📝 I regularly share articles on [https://www.linkedin.com/in/kiriti-desarkar/](https://www.linkedin.com/in/kiriti-desarkar/)
 
