@@ -10,12 +10,12 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v2.4.3
 
       - name: Set up Node.js
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v2.4.1
         with:
-          node-version: 14
+          node-version: 16
 
       - name: Install dependencies
         run: npm install puppeteer
@@ -25,8 +25,8 @@ jobs:
 
       - name: Commit and push changes
         run: |
-          git config user.name "Your Name"
-          git config user.email "your-email@example.com"
+          git config user.name "kiriti-desarkar"
+          git config user.email "kiriti.desarkar.mails@gmail.com"
           git add .
           git commit -m "Update LeetCode profile screenshot"
           git push
