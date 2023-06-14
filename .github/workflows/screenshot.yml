@@ -21,6 +21,8 @@ jobs:
         run: npm install puppeteer
       - name: Install axios
         run: npm install axios
+      - name: Install cheerio
+        run: npm install cheerio
 
       - name: Run screenshot script
         run: node capture-screenshot.js
