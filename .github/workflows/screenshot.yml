@@ -19,6 +19,8 @@ jobs:
 
       - name: Install dependencies
         run: npm install puppeteer
+      - name: Install axios
+        run: npm install axios
 
       - name: Run screenshot script
         run: node capture-screenshot.js
