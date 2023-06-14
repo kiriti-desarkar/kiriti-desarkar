@@ -4,7 +4,7 @@ const puppeteer = require('puppeteer');
 
 (async () => {
   // Fetch the HTML content of the LeetCode profile page
-  const response = await axios.get('https://leetcode.com/your-username');
+  const response = await axios.get('https://leetcode.com/kiritidesarkar');
   const html = response.data;
 
   // Load the HTML content into Cheerio
