@@ -11,10 +11,10 @@ const puppeteer = require('puppeteer');
   await page.goto('https://leetcode.com/kiritidesarkar');
   
   // Wait for the profile page to load
-  await page.waitForSelector('.profile-panel');
+  await page.waitForSelector('.progress-group');
   
   // Capture the screenshot of the profile section
-  const elementHandle = await page.$('.profile-panel');
+  const elementHandle = await page.$('.progress-group');
   await elementHandle.screenshot({ path: 'leetcode-profile.png' });
   
   await browser.close();
