@@ -16,8 +16,11 @@ const puppeteer = require('puppeteer');
   // Extract the HTML content of the dashboard section
   const dashboardHtml = $.html(dashboardSection);
 
-  // Launch a headless Chrome browser using Puppeteer
-  const browser = await puppeteer.launch();
+  // Launch a headless Brave browser using Puppeteer
+  const browser = await puppeteer.launch({
+    executablePath: 'C:/Program Files/BraveSoftware/Brave-Browser/Application/brave.exe',
+    headless: false,
+  });
 
   // Open a new page
   const page = await browser.newPage();
@@ -25,10 +28,16 @@ const puppeteer = require('puppeteer');
   // Set the viewport size if necessary
   await page.setViewport({ width: 1280, height: 800 });
 
-  // Set the HTML content of the page to the dashboard section
-  await page.setContent(dashboardHtml);
+  // Set the HTML content of the page to the entire profile page
+  await page.setContent(html);
 
-  // Capture a screenshot of the dashboard section
+  // Wait for the dashboard section to appear on the page
+  await page.waitForSelector('.panel.panel-primary');
+
+  // Delay for 5 seconds (5000 milliseconds)
+  await new Promise((resolve) => setTimeout(resolve, 5000));
+
+  // Capture a screenshot of the page
   await page.screenshot({ path: 'leetcode-dashboard.png' });
 
   // Close the browser
