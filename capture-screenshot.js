@@ -3,10 +3,7 @@ const puppeteer = require('puppeteer');
 (async () => {
 	
   // Launch a headless Brave browser using Puppeteer
-  const browser = await puppeteer.launch({
-    executablePath: 'C:/Program Files/BraveSoftware/Brave-Browser/Application/brave.exe',
-    headless: false,
-  });
+  const browser = await puppeteer.launch({headless: false });
   
   // Open a new page
   const page = await browser.newPage();
