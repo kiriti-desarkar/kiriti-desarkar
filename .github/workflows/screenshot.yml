@@ -22,6 +22,12 @@ jobs:
 
       - name: Install Puppeteer dependencies
         run: sudo apt-get install -y libx11-xcb1 libxcb1 libxcb-dri3-0 libdrm2 libgbm1
+        
+      - name: Inspect Runner Environment
+        run: |
+          echo "Operating System: ${{ runner.os }}"
+          echo "Node.js Version: ${{ env.RUNNER_TOOL_CACHE/node }}/bin/node"
+          echo "Chrome Executable Path: $(which google-chrome)"       
 
       - name: Run Puppeteer
         run: node capture-screenshot.js
