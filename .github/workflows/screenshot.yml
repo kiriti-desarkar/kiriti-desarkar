@@ -15,17 +15,16 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '16.x'
+          node-version: '16'
 
       - name: Install dependencies
-        run: npm install puppeteer
-      - name: Install axios
-        run: npm install axios
-      - name: Install cheerio
-        run: npm install cheerio
+        run: npm install
 
-      - name: Run screenshot script
-        run: node capture-screenshot.js
+      - name: Install Puppeteer dependencies
+        run: sudo apt-get install -y libx11-xcb1 libxcb1 libxcb-dri3-0 libdrm2 libgbm1
+
+      - name: Run Puppeteer
+        run: npm run capture-screenshot.js
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
