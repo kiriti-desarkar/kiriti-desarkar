@@ -26,7 +26,7 @@ jobs:
       - name: Inspect Runner Environment
         run: |
           echo "Operating System: ${{ runner.os }}"
-          echo "Node.js Version: ${{ env.RUNNER_TOOL_CACHE/node }}/bin/node"
+          echo "Node.js Version: ${{ env.node }}/bin/node"
           echo "Chrome Executable Path: $(which google-chrome)"       
 
       - name: Run Puppeteer
