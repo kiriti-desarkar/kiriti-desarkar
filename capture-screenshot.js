@@ -1,24 +1,22 @@
 const puppeteer = require('puppeteer');
 
 (async () => {
-	
-  // Launch a headless Brave browser using Puppeteer
-  const browser = await puppeteer.launch({headless: false });
-  
+  // Launch a headless Chrome browser using Puppeteer
+  const browser = await puppeteer.launch({ headless: false });
+
   // Open a new page
   const page = await browser.newPage();
-  
+
   const options = {
-	  path: 'leetcode-dashboard.png',
-	  fullPage: true,
-	  omitBackground: true
-  }
-  
-  page.goto('https://leetcode.com/kiritidesarkar');
-  
+    path: 'leetcode-dashboard.png',
+    fullPage: true,
+    omitBackground: true,
+  };
+
+  await page.goto('https://leetcode.com/kiritidesarkar');
 
   // Delay for 5 seconds (5000 milliseconds)
-  await new Promise((resolve) => setTimeout(resolve, 5000));
+  await page.waitForTimeout(5000);
 
   // Capture a screenshot of the page
   await page.screenshot(options);
