@@ -24,7 +24,7 @@ jobs:
         run: sudo apt-get install -y libx11-xcb1 libxcb1 libxcb-dri3-0 libdrm2 libgbm1
 
       - name: Run Puppeteer
-        run: npm run capture-screenshot.js
+        run: node capture-screenshot.js
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
