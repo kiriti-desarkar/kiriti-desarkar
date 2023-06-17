@@ -1,8 +1,10 @@
-const puppeteer = require('puppeteer');
+const puppeteer = require('puppeteer-core');
 
 (async () => {
-  // Launch a headless Chrome browser using Puppeteer
-  const browser = await puppeteer.launch({ headless: false });
+  const browser = await puppeteer.launch({
+    headless: false,
+    executablePath: '/usr/bin/google-chrome',
+  });
 
   // Open a new page
   const page = await browser.newPage();
