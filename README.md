@@ -6,8 +6,7 @@
 - 🔭 I’m currently working with [FIS Global](https://www.fisglobal.com/)
 
 - 🌱 I’m currently learning 
-1. **DSA and System Design from https://heycoach.in/** 
-2. **Full stack development from https://www.mygreatlearning.com/**
+  **Full stack development from https://www.mygreatlearning.com/**
 
 - 👯 I’m looking to collaborate on **next project**
 
